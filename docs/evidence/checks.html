@@ -1,0 +1,63 @@
+<meta charset="utf-8"><title>TaskMate — фактические проверки</title><style>body{background:#101828;color:#e4e7ec;padding:36px;font:16px monospace}pre{white-space:pre-wrap}</style><pre>TASKMATE • ЛОКАЛЬНАЯ ПРОВЕРКА • 13.10.2026
+Не Telegram. Не подтверждение деплоя.
+
+test_csv_and_errors (test_service.Tests) ... ok
+test_feedback (test_service.Tests) ... ok
+test_isolation (test_service.Tests) ... ok
+test_lifecycle_and_persistence (test_service.Tests) ... ok
+test_priority_and_validation (test_service.Tests) ... ok
+test_reminder_persistence (test_service.Tests) ... ok
+test_sql_text (test_service.Tests) ... ok
+test_network_failure_retries (test_transport.TransportTests) ... 2026-10-13 11:24:17,214 WARNING bot: Reminder delivery failed; will retry
+ok
+test_private_command_and_group_rejection (test_transport.TransportTests) ... ok
+test_reminder_sends_and_marks (test_transport.TransportTests) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.054s
+
+OK
+
+&gt; /start
+TaskMate — помощник для задач команды.
+/add Текст | высокий/обычный/низкий | YYYY-MM-DD HH:MM
+Срок необязателен, время московское.
+/list — открытые задачи; /history — последние 7 дней
+/done ID — завершить; /delete ID — удалить свою задачу
+/team Имя или отдел — справочник
+/feedback 1-5 | отзыв — обратная связь
+/stats — моя статистика; /help — справка
+
+&gt; /add Подготовить презентацию | высокий
+Задача #1 добавлена: Подготовить презентацию (высокий).
+
+&gt; /add Проверить бюджет | низкий
+Задача #2 добавлена: Проверить бюджет (низкий).
+
+&gt; /list
+○ #1 [высокий] Подготовить презентацию
+○ #2 [низкий] Проверить бюджет
+
+&gt; /done 1
+Задача завершена.
+
+&gt; /history
+○ #2 [низкий] Проверить бюджет
+✓ #1 [высокий] Подготовить презентацию
+
+&gt; /team IT
+Иван Иванов — IT, Разработчик
+ivan@example.com
+Анна Смирнова — IT, Аналитик
+anna@example.com
+
+&gt; /team Несуществующий
+Сотрудники не найдены.
+
+&gt; /feedback 4 | Тестовая запись: удобно
+Спасибо! Отзыв сохранён.
+
+&gt; /stats
+Всего задач: 2. Завершено: 1.
+
+</pre>
